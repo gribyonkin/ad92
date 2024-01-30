@@ -19,7 +19,8 @@ def get_prices(hashMap,_files=None,_data=None):
   json_data = response.text
   #.json()
 
-  hashMap.put("toast","Проверяем цены!!!")
+  hashMap.put("res",json_data)
+  #hashMap.put("toast","Проверяем цены!!!")
 
   return hashMap
 
