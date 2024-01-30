@@ -1,3 +1,5 @@
+
+import requests
 import json
 
 def fun1(hashMap,_files=None,_data=None):
@@ -7,6 +9,15 @@ def fun1(hashMap,_files=None,_data=None):
   return hashMap
 
 def get_prices(hashMap,_files=None,_data=None):
+    
+  art = hashMap.get("article")
+  brnd = hashMap.get("brand")
+
+  param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd)]
+  response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
+
+  json_data = response.text
+  #.json()
 
   hashMap.put("toast","Проверяем цены!!!")
 
