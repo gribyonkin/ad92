@@ -32,3 +32,9 @@ def after_scan(hashMap,_files=None,_data=None):
   hashMap.put("ShowScreen","Найден товар")
 
   return hashMap
+
+def choice_user(hashMap,_files=None,_data=None):
+
+  hashMap.put("ShowScreen","Чек ККМ")
+
+  return hashMap
