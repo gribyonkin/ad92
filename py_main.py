@@ -148,27 +148,16 @@ def fun1(hashMap,_files=None,_data=None):
    
     j["customcards"]["cardsdata"]=[]
     for i in range(0,5):
-      if i==0:
-        c =  {
-       
-          "group": "Комплектующие"
-       
-        }
-      
-        j["customcards"]["cardsdata"].append(c)
+      #if i==0:
+      #  c =  {"group": "Комплектующие"}
+      #  j["customcards"]["cardsdata"].append(c)
 
-      if i==4:
-        c =  {
-       
-          "group": "Уценка"
-       
-        }
-      
-        j["customcards"]["cardsdata"].append(c)   
+      #if i==4:
+      #  c =  {"group": "Уценка"}
+      #  j["customcards"]["cardsdata"].append(c)   
 
       c =  {
-        "key": str(i),
-       
+        "key": str(i),       
         "descr": "Pos. "+str(i),
         "val": str(random.randint(10, 10000))+" руб.",
         "string1": "Материнская плата ASUS ROG MAXIMUS Z690 APEX",
