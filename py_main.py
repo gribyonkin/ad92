@@ -178,8 +178,9 @@ def fun1(hashMap,_files=None,_data=None):
       
       j["customcards"]["cardsdata"].append(c)
 
-    if not hashMap.containsKey("cards"):
-      hashMap.put("cards",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
+    #if not hashMap.containsKey("cards"):
+    
+    hashMap.put("cards",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
     
     return hashMap
 
