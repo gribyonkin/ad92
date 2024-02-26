@@ -102,7 +102,7 @@ def fun1(hashMap,_files=None,_data=None):
                 "document_type": "",
                 "mask": "",
                 "Variable": "",
-                "TextSize": "16",
+                "TextSize": "10",
                 "TextColor": "#DB7093",
                 "TextBold": True,
                 "TextItalic": False,
@@ -148,14 +148,6 @@ def fun1(hashMap,_files=None,_data=None):
    
     j["customcards"]["cardsdata"]=[]
     for i in range(0,5):
-      #if i==0:
-      #  c =  {"group": "Комплектующие"}
-      #  j["customcards"]["cardsdata"].append(c)
-
-      #if i==4:
-      #  c =  {"group": "Уценка"}
-      #  j["customcards"]["cardsdata"].append(c)   
-
       c =  {
         "key": str(i),       
         "descr": "Pos. "+str(i),
