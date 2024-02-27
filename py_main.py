@@ -150,7 +150,7 @@ def fill_prices_card(hashMap,_files=None,_data=None):
 
     #if not hashMap.containsKey("cards"):
     
-    hashMap.put("cards",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
+    hashMap.put("cards_price",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
     
     return hashMap
 
