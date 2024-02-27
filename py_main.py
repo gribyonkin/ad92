@@ -141,8 +141,8 @@ def fill_prices_card(hashMap,_files=None,_data=None):
   hashMap.put("delivery",json_data['delivery_period'])
 
   for item in json_data["prices"]:
+    i += 1
     c =  {
-      i=i+1
       "key": str(i),       
       "descr": "Pos. "+str(i),
       "val": str(item['retail_price'])+" руб.",
