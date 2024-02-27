@@ -142,10 +142,8 @@ def fill_prices_card(hashMap,_files=None,_data=None):
       c =  {
         "key": str(i),       
         "descr": "Pos. "+str(i),
-        "val": str(random.randint(10, 10000))+" руб.",
-        "string1": "Материнская плата ASUS ROG MAXIMUS Z690 APEX",
-        "string2": "Гнездо процессора LGA 1700",
-        "string3": "Частотная спецификация памяти 4800 МГц"
+        "val": str(5000)+" руб.",
+        "price_str": "Цена"
       }
       
       j["customcards"]["cardsdata"].append(c)
