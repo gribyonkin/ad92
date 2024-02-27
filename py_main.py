@@ -7,6 +7,8 @@ def fill_prices_card(hashMap,_files=None,_data=None):
   art = hashMap.get("article")
   brnd = hashMap.get("brand")
 
+  i=0
+
   param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd)]
   response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
 
@@ -136,15 +138,26 @@ def fill_prices_card(hashMap,_files=None,_data=None):
   j["customcards"]["cardsdata"]=[]
   
   #цикл по "json_data"
-  for i in range(0,5):
+  hashMap.put("delivery",json_data['delivery_period'])
+
+  for item in json_data["prices"]:
     c =  {
       "key": str(i),       
       "descr": "Pos. "+str(i),
-      "val": str(5000)+" руб.",
-      "price_str": "Цена"
+      "val": str(item['retail_price'])+" руб.",
+      "price_str": item['name']
     }
-    
     j["customcards"]["cardsdata"].append(c)
+
+  #for i in range(0,5):
+  #  c =  {
+  #    "key": str(i),       
+  #    "descr": "Pos. "+str(i),
+  #    "val": str(5000)+" руб.",
+  #    "price_str": "Цена"
+  #  }
+    
+  #  j["customcards"]["cardsdata"].append(c)
 
   #if not hashMap.containsKey("cards"):
   
