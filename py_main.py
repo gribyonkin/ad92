@@ -49,38 +49,7 @@ def fill_prices_card(hashMap,_files=None,_data=None):
                   "document_type": "",
                   "mask": "",
                   "Variable": ""
-              },
-              {
-                  "type": "TextView",
-                  "show_by_condition": "",
-                  "Value": "@delivery_period",
-                  "NoRefresh": False,
-                  "document_type": "",
-                  "mask": "",
-                  "Variable": ""
-              },
-              {
-                  "type": "Button",
-                  "show_by_condition": "",
-                  "Value": "#f290",
-                  "TextColor": "#DB7093",
-                  "Variable": "btn_tst1",
-                  "NoRefresh": False,
-                  "document_type": "",
-                  "mask": ""
-                  
-              },
-              {
-                  "type": "Button",
-                  "show_by_condition": "",
-                  "Value": "#f469",
-                  "TextColor": "#DB7093",
-                  "Variable": "btn_tst2",
-                  "NoRefresh": False,
-                  "document_type": "",
-                  "mask": ""
-                  
-              }
+              }              
               ]
               },
               {
@@ -91,7 +60,7 @@ def fill_prices_card(hashMap,_files=None,_data=None):
               "document_type": "",
               "mask": "",
               "Variable": "",
-              "TextSize": "10",
+              "TextSize": "20",
               "TextColor": "#DB7093",
               "TextBold": True,
               "TextItalic": False,
@@ -101,15 +70,15 @@ def fill_prices_card(hashMap,_files=None,_data=None):
               "weight": 2
               },
               {
-              "type": "PopupMenuButton",
-              "show_by_condition": "",
-              "Value": "Удалить;Проверить",
-              "NoRefresh": False,
-              "document_type": "",
-              "mask": "",
-              "Variable": "menu_delete"
-              
-              }
+                "type": "Button",
+                "show_by_condition": "",
+                "Value": "#f290",
+                "TextColor": "#DB7093",
+                "Variable": "btn_tst1",
+                "NoRefresh": False,
+                "document_type": "",
+                "mask": ""                  
+              }              
               ]
           },
           {
@@ -137,9 +106,10 @@ def fill_prices_card(hashMap,_files=None,_data=None):
   
   j["customcards"]["cardsdata"]=[]
   
-  #цикл по "json_data"
   hashMap.put("delivery",json_data['delivery_period'])
+  hashMap.put("price",json_data['price'])
 
+  #цикл по "json_data"
   for item in json_data["prices"]:
     i += 1
     c =  {
