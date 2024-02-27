@@ -25,18 +25,6 @@ def fill_prices_card(hashMap,_files=None,_data=None):
                 "weight": "0",
                 "Elements": [
                 {
-                "type": "CheckBox",
-                "Value": "@cb1",
-                "NoRefresh": False,
-                "document_type": "",
-                "mask": "",
-                "Variable": "cb1",
-                "BackgroundColor": "#DB7093",
-                "width": "match_parent",
-                "height": "wrap_content",
-                "weight": 2
-                },
-                {
                 "type": "LinearLayout",
                 "orientation": "vertical",
                 "height": "wrap_content",
