@@ -4,6 +4,9 @@ import random
 
 def fill_prices_card(hashMap,_files=None,_data=None):
 
+  if not hashMap.containsKey("quant"):
+    hashMap.put("quant", str(0))
+    
   art = hashMap.get("article")
   brnd = hashMap.get("brand")
 
@@ -119,19 +122,7 @@ def fill_prices_card(hashMap,_files=None,_data=None):
       "price_str": item['name']
     }
     j["customcards"]["cardsdata"].append(c)
-
-  #for i in range(0,5):
-  #  c =  {
-  #    "key": str(i),       
-  #    "descr": "Pos. "+str(i),
-  #    "val": str(5000)+" руб.",
-  #    "price_str": "Цена"
-  #  }
-    
-  #  j["customcards"]["cardsdata"].append(c)
-
-  #if not hashMap.containsKey("cards"):
-  
+ 
   hashMap.put("cards_price",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
   
   return hashMap
