@@ -1,4 +1,3 @@
-
 import requests
 import json
 import random
@@ -43,7 +42,7 @@ def fill_prices_card(hashMap,_files=None,_data=None):
                 {
                     "type": "TextView",
                     "show_by_condition": "",
-                    "Value": "@quant_str",
+                    "Value": "@delivery_period",
                     "NoRefresh": False,
                     "document_type": "",
                     "mask": "",
