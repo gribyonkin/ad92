@@ -2,6 +2,25 @@ import requests
 import json
 import random
 
+def fill_profiles(hashMap,_files=None,_data=None):
+  art = 'oc90'
+  brnd = 'Mahle'
+  limit = 3
+  param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd), ('limit', limit)]
+  response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
+
+  json_data = response.json()
+  print(response.json())
+
+  str_list = '<Выбери цены>;'
+  for item in json_data:
+      str_list = str_list +item["provider"] + ' (' + item["delivery_period"] + ');'
+  
+  hashMap.put("list_str", str_list)
+  
+  return hashMap
+
+
 def fill_prices_card(hashMap,_files=None,_data=None):
 
   if not hashMap.containsKey("quant"):
