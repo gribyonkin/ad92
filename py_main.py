@@ -3,8 +3,8 @@ import json
 import random
 
 def fill_profiles(hashMap,_files=None,_data=None):
-  art = 'oc90'
-  brnd = 'Mahle'
+  art = hashMap.get("article")
+  brnd = hashMap.get("brand")
   limit = 3
   param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd), ('limit', limit)]
   response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
@@ -20,7 +20,6 @@ def fill_profiles(hashMap,_files=None,_data=None):
   
   return hashMap
 
-
 def fill_prices_card(hashMap,_files=None,_data=None):
 
   if not hashMap.containsKey("quant"):
@@ -28,10 +27,11 @@ def fill_prices_card(hashMap,_files=None,_data=None):
     
   art = hashMap.get("article")
   brnd = hashMap.get("brand")
+  limit = 3
 
   i=0
 
-  param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd)]
+  param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd), ('limit', limit)]
   response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
 
   json_data = response.json()
