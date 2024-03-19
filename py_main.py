@@ -12,9 +12,9 @@ def fill_profiles(hashMap,_files=None,_data=None):
   json_data = response.json()
   print(response.json())
 
-  str_list = '<Выбери цены>;'
+  str_list = '<Выбери цены>'
   for item in json_data:
-      str_list = str_list +item["provider"] + ' (' + item["delivery_period"] + ');'
+      str_list = str_list + ';'+ item["provider"] + ' (' + item["delivery_period"] + ')'
   
   hashMap.put("str_list", str_list)
   
