@@ -16,7 +16,7 @@ def fill_profiles(hashMap,_files=None,_data=None):
   for item in json_data:
       str_list = str_list +item["provider"] + ' (' + item["delivery_period"] + ');'
   
-  hashMap.put("list_str", str_list)
+  hashMap.put("str_list", str_list)
   
   return hashMap
 
