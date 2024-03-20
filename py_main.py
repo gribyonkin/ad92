@@ -18,6 +18,7 @@ def fill_profiles(hashMap,_files=None,_data=None):
   
   hashMap.put("str_list", str_list)
   hashMap.put("toast", str_list)
+  hashMap.put("RefreshScreen", "Найден товар")
   return hashMap
 
 def fill_prices_card(hashMap,_files=None,_data=None):
