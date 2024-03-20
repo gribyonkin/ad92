@@ -29,7 +29,6 @@ def fill_prices_card(hashMap,_files=None,_data=None):
   art = hashMap.get("article")
   brnd = hashMap.get("brand")
   limit = 3
-
   i=0
 
   param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd), ('limit', limit)]
@@ -144,7 +143,6 @@ def fill_prices_card(hashMap,_files=None,_data=None):
     j["customcards"]["cardsdata"].append(c)
  
   hashMap.put("cards_price",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
-  
   return hashMap
 
 
