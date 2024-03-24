@@ -22,7 +22,7 @@ def fill_profiles(hashMap,_files=None,_data=None):
   return hashMap
 
 def choose_profile(hashMap,_files=None,_data=None):
-  hashMap.put("toast", hashMap.get("str_list"))
+  #hashMap.put("toast", hashMap.get("str_list"))
 
   return hashMap
 
