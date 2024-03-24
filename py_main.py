@@ -21,7 +21,7 @@ def fill_profiles(hashMap,_files=None,_data=None):
   hashMap.put("RefreshScreen", "Найден товар")
   return hashMap
 
-def choose_profiles(hashMap,_files=None,_data=None):
+def choose_profile(hashMap,_files=None,_data=None):
   hashMap.put("toast", hashMap.get("str_list"))
 
   return hashMap
