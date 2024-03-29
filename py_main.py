@@ -25,8 +25,21 @@ def fill_profiles(hashMap,_files=None,_data=None):
 
 #choose choice
 def choice_profile(hashMap,_files=None,_data=None):
-  hashMap.put("toast", hashMap.get("str_list"))
+  #hashMap.put("toast", hashMap.get("str_list"))
+  str_srch = hashMap.get("str_list")
+  
+  art = hashMap.get("article")
+  brnd = hashMap.get("brand")
+  limit = 3
+  i=0
 
+  param_tuples = [('key', 's6e1IlkWJJfzNu07e8fvuIBcAZmnJB5e'), ('article', art), ('brand', brnd), ('limit', limit)]
+  response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
+
+  json_data = response.json()
+
+
+  
   return hashMap
 
 def fill_prices_card(hashMap,_files=None,_data=None):
@@ -43,7 +56,6 @@ def fill_prices_card(hashMap,_files=None,_data=None):
   response = requests.post('https://avtodrug92.freno.ru/ApiRequest/getOneOffer', data=param_tuples)
 
   json_data = response.json()
-  #.text
 
   j = { "customcards":         {
           "options":{
