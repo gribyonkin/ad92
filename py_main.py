@@ -21,7 +21,10 @@ def fill_profiles(hashMap,_files=None,_data=None):
   hashMap.put("RefreshScreen", "Найден товар")
   return hashMap
 
-def choose_profile(hashMap,_files=None,_data=None):
+
+
+#choose choice
+def choice_profile(hashMap,_files=None,_data=None):
   hashMap.put("toast", hashMap.get("str_list"))
 
   return hashMap
@@ -149,7 +152,6 @@ def fill_prices_card(hashMap,_files=None,_data=None):
  
   hashMap.put("cards_price",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
   return hashMap
-
 
 def fun1(hashMap,_files=None,_data=None):
     
