@@ -129,6 +129,19 @@ def choice_profile(hashMap,_files=None,_data=None):
   j["customcards"]["cardsdata"]=[]
   hashMap.put("toast", "Привет!!")
   
+  #цикл по "json_data"
+  for item in json_data["prices"]:
+    i += 1
+    c =  {
+      "key": str(i),       
+      "descr": "Pos. "+str(i),
+      "val": str(item['retail_price'])+" руб.",
+      "price_str": item['name']
+    }
+    j["customcards"]["cardsdata"].append(c)
+ 
+  hashMap.put("cards_price",json.dumps(j,ensure_ascii=False).encode('utf8').decode())
+
   return hashMap
 
 def fill_prices_card(hashMap,_files=None,_data=None):
