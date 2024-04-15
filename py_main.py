@@ -38,7 +38,7 @@ def choice_profile(hashMap,_files=None,_data=None):
 
   json_data = response.json()
 
-
+  hashMap.put("toast", "Привет!!")
   
   return hashMap
 
